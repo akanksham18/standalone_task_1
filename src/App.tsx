@@ -1,8 +1,10 @@
-import Navbar from "./components/Navbar"
-
+import Indicators from "./components/Indicators"
 const App = () => {
   return (
-    <Navbar/>
+    <div>
+      <Navbar/>
+      <Indicators />
+    </div>
   )
 }
 
