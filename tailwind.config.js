@@ -13,7 +13,7 @@ export default {
         lexend: ['Lexend Deca', 'sans-serif'],
       },
       padding: {
-        'page-px': '26px',
+        'page-px': '44px',
       }
     },
   },
