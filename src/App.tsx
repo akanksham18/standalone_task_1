@@ -1,8 +1,9 @@
-import React from 'react'
-
+import Indicators from "./components/Indicators"
 const App = () => {
   return (
-    <div className='text-red-500'>App</div>
+    <div>
+      <Indicators />
+    </div>
   )
 }
 
