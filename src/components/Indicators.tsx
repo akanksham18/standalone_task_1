@@ -1,17 +1,34 @@
-import Idle from "./Idle"
-import LockUnlock from "./LockUnlock"
-import Oee from "./Oee"
-import Production from "./Production"
+import Indicator from "./Indicator";
 
 const Indicators = () => {
-    return (
-        <div className="flex w-[712px] h-[80px] gap-8 left-[26px] top-[89px] rounded-[15px_0px_0px_0px]">
-            <Oee />
-            <Production />
-            <Idle />
-            <LockUnlock />
-        </div>
-    )
-}
+    const texts = ["OEE", "Production", "Idle", "Lock/Unlock"];
 
-export default Indicators
+    const containerStyles = [
+        "left-[26px]",
+        "left-[198px]",
+        "left-[396px]",
+        "left-[588px]",
+    ];
+
+    const spanStyles = [
+        "w-[37px] h-[23px] left-[83px]",
+        "w-[96px] h-[46px] left-[225px] ",
+        "w-[35px] h-[23px] left-[450px] ",
+        "w-[111px] h-[23px] left-[607px]",
+    ];
+
+    return (
+        <div className="relative w-[712px] h-[80px] left-[26px]">
+            {texts.map((text, index) => (
+                <Indicator
+                    key={index}
+                    text={text}
+                    customStyle={containerStyles[index]}
+                    spanStyle={spanStyles[index]}
+                />
+            ))}
+        </div>
+    );
+};
+
+export default Indicators;
