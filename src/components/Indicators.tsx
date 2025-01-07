@@ -1,6 +1,7 @@
 import Indicator from "./Indicator";
 
 const Indicators = () => {
+
     const texts = ["OEE", "Production", "Idle", "Lock/Unlock"];
 
     const containerStyles = [
@@ -29,6 +30,5 @@ const Indicators = () => {
             ))}
         </div>
     );
-};
-
+}
 export default Indicators;
