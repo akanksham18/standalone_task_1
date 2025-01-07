@@ -1,8 +1,10 @@
-import Indicators from "./components/Indicators"
+import { Home, Navbar } from './components/index';
+
 const App = () => {
   return (
     <div>
-      <Indicators />
+      <Navbar/>
+      <Home/>
     </div>
   )
 }

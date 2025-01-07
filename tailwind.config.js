@@ -12,6 +12,9 @@ export default {
       fontFamily: {
         lexend: ['Lexend Deca', 'sans-serif'],
       },
+      padding: {
+        'page-px': '44px',
+      }
     },
   },
   plugins: [],
