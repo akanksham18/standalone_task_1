@@ -1,4 +1,4 @@
-import { Indicators, Pareto, Indicator } from './index';
+import { Indicators, Pareto, Indicator, Timelines } from '../components/index';
 
 const Home = () => {
     const texts = ["Alerts", "Alarms"];
@@ -6,8 +6,9 @@ const Home = () => {
 
     return (
         <div className="Home flex px-page-px my-10 gap-10">
-            <div className="left">
+            <div className="left w-[56vw]">
                 <Indicators />
+                <Timelines/>
             </div>
             <div className="OEE w-full flex flex-col">
                 <Pareto />

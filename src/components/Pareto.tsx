@@ -124,7 +124,7 @@ const Pareto: React.FC = () => {
     };
 
     return <div className="Pareto bg-white shadow-[inset_2px_4px_12px_2px_#D9D9D9] p-4">
-        <ReactECharts option={options} style={{ height: 240, width: '100%' }} />
+        <ReactECharts option={options} style={{ height: 240, width: '80%' }} />
     </div>;
 };
 
