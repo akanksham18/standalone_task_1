@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import * as echarts from 'echarts';
 
-const SparklineChart: React.FC = () => {
+const SparklineChart1: React.FC = () => {
     const chartRef = useRef<HTMLDivElement | null>(null);
 
     useEffect(() => {
@@ -61,19 +61,24 @@ const SparklineChart: React.FC = () => {
     }, []);
 
     return (
-        <div className="relative flex w-64 h-44 justify-center items-center">
-            {/* Sparkline Chart */}
-            <div
-                ref={chartRef}
-                className="bg-white rounded-lg shadow-md flex justify-center items-center w-full h-full"
-            ></div>
+        <div className='w-[290px] h-[180px] top-[508px] left-[26px] rounded-[15px]  bg-[#F3F3F3]'>
+            <div className=" w-[290px] h-[180px] top-[508px] left-[26px] gap-0">
+                {/* Text inside the Sparkline chart rectangle */}
+                <div className="w-[97px] h-[46px] top-[518px] left-[35px] font-['Lexend Deca'] text-[18px] font-normal leading-[22.5px]">
+                    Sparkline 1
+                </div>
 
-            {/* Sparkline Text */}
-            <div className="absolute top-2 left-2 font-['Lexend_Deca'] text-[14px] font-medium text-black">
-                Sparkline 1
+                {/* Chart container */}
+                <div className="w-[238px] h-[141.9px] top-[541px] left-[52px]">
+                    {/* Line Chart */}
+                    <div
+                        ref={chartRef}
+                        className="rounded-lg flex justify-center items-center w-full h-full"
+                    ></div>
+                </div>
             </div>
         </div>
     );
 };
 
-export default SparklineChart;
+export default SparklineChart1;
