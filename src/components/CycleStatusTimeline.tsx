@@ -140,11 +140,11 @@ const CycleStatusTimeline: React.FC<CycleStatusTimelineProps> = ({
                 top: -15,
             },
             grid: {
-                height: 30,
+                height: 20,
                 left: 30, // Adjusted left padding
                 right: 30, // Adjusted right padding
                 bottom: 5, // Adjusted bottom padding
-                top: 17, // Adjusted top padding
+                top: 15, // Adjusted top padding
             },
             xAxis: {
                 interval: 1,

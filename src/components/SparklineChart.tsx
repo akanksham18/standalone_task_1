@@ -61,7 +61,7 @@ const SparklineChart: React.FC = () => {
     }, []);
 
     return (
-        <div className="relative flex w-[200px] h-[120px] justify-center items-center">
+        <div className="relative flex w-64 h-44 justify-center items-center">
             {/* Sparkline Chart */}
             <div
                 ref={chartRef}
