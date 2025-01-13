@@ -23,14 +23,14 @@ const SparklineChart: React.FC = () => {
                     axisLine: { show: false },
                     axisTick: { show: false },
                     axisLabel: { show: false },
-                    splitLine: { show: false },
+                    splitLine: { show: true, lineStyle: { color: '#F2F2F2' } },
                 },
                 yAxis: {
                     type: 'value',
                     axisLine: { show: false },
                     axisTick: { show: false },
                     axisLabel: { show: false },
-                    splitLine: { show: false },
+                    splitLine: { show: true, lineStyle: { color: '#F2F2F2' } },
                 },
                 series: [
                     {
@@ -61,30 +61,15 @@ const SparklineChart: React.FC = () => {
     }, []);
 
     return (
-        <div className="relative w-full h-full flex justify-center items-center">
+        <div className="relative flex w-[200px] h-[120px] justify-center items-center">
             {/* Sparkline Chart */}
             <div
                 ref={chartRef}
-                className="bg-white rounded-md shadow-md flex justify-center items-center"
-                style={{
-                    width: '100%',
-                    height: '100%',
-                    minWidth: '238px',
-                    minHeight: '132.69px',
-                    border: '2px solid #54A6D1',
-                }}
+                className="bg-white rounded-lg shadow-md flex justify-center items-center w-full h-full"
             ></div>
 
             {/* Sparkline Text */}
-            <div
-                className="absolute top-2 left-2"
-                style={{
-                    fontFamily: 'Lexend Deca',
-                    fontSize: '18px',
-                    fontWeight: 'normal',
-                    lineHeight: '22.5px',
-                }}
-            >
+            <div className="absolute top-2 left-2 font-['Lexend_Deca'] text-[14px] font-medium text-black">
                 Sparkline 1
             </div>
         </div>

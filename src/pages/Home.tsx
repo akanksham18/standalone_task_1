@@ -28,7 +28,7 @@ const Home: React.FC = () => {
                     </div>
 
                     {/* Sparkline Chart */}
-                    <div className="SparklineContainer flex justify-center mt-10">
+                    <div className="SparklineContainer flex justify-start mt-10">
                         <SparklineChart />
                     </div>
                 </div>
