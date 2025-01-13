@@ -1,4 +1,5 @@
 import { Indicators, Pareto, Indicator, Timelines } from '../components/index';
+import SparklineChart from '../components/SparklineChart';
 
 const Home = () => {
     const texts = ["Alerts", "Alarms"];
@@ -20,8 +21,11 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <div className="bottom">
-                
+            <div className="bottom flex justify-between w-full py-4 h-full">
+                <SparklineChart/>
+                <SparklineChart/>
+                <SparklineChart/>
+                <SparklineChart/>
             </div>
         </div>
     )
