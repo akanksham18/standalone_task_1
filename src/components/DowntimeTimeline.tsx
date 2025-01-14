@@ -2458,11 +2458,11 @@ const DowntimeTimeline: React.FC = () => {
         top: -15,
       },
       grid: {
-        height: 30,
+        height: 20,
         left: 30,
         right: 30,
         bottom: 0,
-        top: 17,
+        top: 12,
       },
       xAxis: {
         interval: 1,

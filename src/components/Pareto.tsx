@@ -30,7 +30,7 @@ const Pareto: React.FC = () => {
             text: 'Pareto Chart of Coffee Service Problems (Duration – 1 Week)',
             left: 'center',
             textStyle: {
-                fontSize: 12,
+                fontSize: 14,
             }
         },
         tooltip: {
@@ -51,7 +51,7 @@ const Pareto: React.FC = () => {
         },
         grid: {
             left: '10%',
-            right: '10%',
+            right: '0%',
             bottom: '15%',
         },
         xAxis: {
@@ -123,7 +123,7 @@ const Pareto: React.FC = () => {
         ],
     };
 
-    return <div className="Pareto bg-white shadow-[inset_2px_4px_12px_2px_#D9D9D9] p-4">
+    return <div className="Pareto w-full bg-white shadow-[inset_2px_4px_12px_2px_#D9D9D9] py-4">
         <ReactECharts option={options} style={{ height: 240, width: '80%' }} />
     </div>;
 };
