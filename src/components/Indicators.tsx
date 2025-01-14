@@ -3,12 +3,13 @@ import { Indicator } from './index'
 const Indicators = () => {
     const texts = ["OEE", "Production", "Idle", "Lock/Unlock"];
 
-    const style = "h-24 md:min-w-32 sm:min-w-20 lg:min-w-48 flex items-center justify-center px-10";
+    const textStyle = "h-24 w-full flex items-center justify-center px-10";
+    const divStyle = "w-full";
 
     return (
-        <div className="flex gap-8 justify-between">
+        <div className="flex gap-6 justify-between my-8">
             {texts.map((text, index) => (
-                <Indicator key={index} text={text} style={style} />
+                <Indicator key={index} text={text} textStyle={textStyle} divStyle={divStyle}/>
             ))}
         </div>
     );

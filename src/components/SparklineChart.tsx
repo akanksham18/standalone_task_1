@@ -1,7 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 import * as echarts from 'echarts';
 
-const SparklineChart1: React.FC = () => {
+
+const SparklineChart1: React.FC<{title:string}> = ({title}) => {
     const chartRef = useRef<HTMLDivElement | null>(null);
 
     useEffect(() => {
@@ -17,24 +18,33 @@ const SparklineChart1: React.FC = () => {
                     bottom: '10%',
                 },
                 xAxis: {
-                    type: 'category',
-                    boundaryGap: false,
-                    data: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'],
+                    type: 'time', // Time scale on x-axis
                     axisLine: { show: false },
                     axisTick: { show: false },
-                    axisLabel: { show: false },
+                    axisLabel: { show: true, formatter: '{HH:mm}', rotate: 30, fontSize:4 }, // Format timestamps
                     splitLine: { show: true, lineStyle: { color: '#F2F2F2' } },
                 },
                 yAxis: {
-                    type: 'value',
+                    type: 'value', // Values on y-axis
                     axisLine: { show: false },
                     axisTick: { show: false },
-                    axisLabel: { show: false },
+                    axisLabel: { show: true },
                     splitLine: { show: true, lineStyle: { color: '#F2F2F2' } },
                 },
                 series: [
                     {
-                        data: [3, 8, 5, 10, 7, 4, 9, 6, 3, 5],
+                        data: [
+                            ['2025-01-01 00:00', 3],
+                            ['2025-01-01 01:00', 8],
+                            ['2025-01-01 02:00', 5],
+                            ['2025-01-01 03:00', 10],
+                            ['2025-01-01 04:00', 7],
+                            ['2025-01-01 05:00', 4],
+                            ['2025-01-01 06:00', 9],
+                            ['2025-01-01 07:00', 6],
+                            ['2025-01-01 08:00', 3],
+                            ['2025-01-01 09:00', 5],
+                        ], // Timestamps and values
                         type: 'line',
                         smooth: true,
                         lineStyle: {
@@ -61,15 +71,15 @@ const SparklineChart1: React.FC = () => {
     }, []);
 
     return (
-        <div className='w-[290px] h-[180px] top-[508px] left-[26px] rounded-[15px]  bg-[#F3F3F3]'>
-            <div className=" w-[290px] h-[180px] top-[508px] left-[26px] gap-0">
+        <div className='w-full h-full top-[508px] left-[26px] rounded-[15px] bg-[#F3F3F3]'>
+            <div className="h-[180px] top-[508px] left-[26px] gap-0">
                 {/* Text inside the Sparkline chart rectangle */}
-                <div className="w-[97px] h-[46px] top-[518px] left-[35px] font-['Lexend Deca'] text-[18px] font-normal leading-[22.5px]">
-                    Sparkline 1
+                <div className="px-4 py-2 leading-[22.5px]">
+                    {title}
                 </div>
 
                 {/* Chart container */}
-                <div className="w-[238px] h-[141.9px] top-[541px] left-[52px]">
+                <div className="w-full h-[141.9px] top-[541px] left-[52px]">
                     {/* Line Chart */}
                     <div
                         ref={chartRef}

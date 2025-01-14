@@ -14,6 +14,7 @@ export default {
       },
       padding: {
         'page-px': '44px',
+        'comp-py': '3rem'
       }
     },
   },
