@@ -256,7 +256,7 @@ const CycleStatusTimeline: React.FC<CycleStatusTimelineProps> = ({
                 <div>
                     <div
                         ref={chartRef}
-                        className={`w-full  h-20`}
+                        className={`w-full  h-[9vh]`}
                     />
 
                     {/* Legend here  */}

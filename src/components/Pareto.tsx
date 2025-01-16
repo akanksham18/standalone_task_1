@@ -123,8 +123,8 @@ const Pareto: React.FC = () => {
         ],
     };
 
-    return <div className="Pareto w-full bg-white shadow-[inset_2px_4px_12px_2px_#D9D9D9] py-6 rounded-[15px] mt-8">
-        <ReactECharts option={options} style={{ height: 290, width: '95%' }} />
+    return <div className="Pareto w-full bg-white shadow-[inset_2px_4px_12px_2px_#D9D9D9] py-6 rounded-[15px]">
+        <ReactECharts option={options} style={{ height: '34vh', width: '95%' }} />
     </div>;
 };
 

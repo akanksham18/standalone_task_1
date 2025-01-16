@@ -2458,7 +2458,7 @@ const DowntimeTimeline: React.FC = () => {
         top: -15,
       },
       grid: {
-        height: 20,
+        height: "20vh",
         left: 30,
         right: 30,
         bottom: 0,
@@ -2573,7 +2573,7 @@ const DowntimeTimeline: React.FC = () => {
         <div>
           <div
             ref={chartRef}
-            className={`w-full ${  "h-20"}`}
+            className={`w-full ${  "h-[6.5vh]"}`}
           ></div>
 
 

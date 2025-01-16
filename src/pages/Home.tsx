@@ -4,29 +4,29 @@ import SparklineChart from '../components/SparklineChart';
 const Home = () => {
     const texts = ["Alerts", "Alarms"];
     const textStyle = "h-28 w-64 flex items-center justify-center px-10";
-    const divStyle = "w-full"
+    const divStyle = "w-full min-h-[10vh]"
 
     const sparklineTitles = ["Sparkline1", "Sparkline2", "Sparkline3", "Sparkline4"];
 
 
 
     return (
-        <div className="Home h-fit justify-center flex flex-col px-page-px">
+        <div className="Home h-fit justify-center flex flex-col gap-8 px-page-px my-8">
             <div className="top flex gap-8">
-                <div className="left w-[80vw]">
+                <div className="left flex flex-col gap-8 w-[80vw]">
                     <Indicators />
                     <Timelines />
                 </div>
-                <div className="OEE w-full flex flex-col">
+                <div className="right OEE w-full flex flex-col gap-8">
                     <Pareto />
-                    <div className="Alerts w-full h-full flex gap-8 justify-between items-center">
+                    <div className="flex gap-6 justify-between">
                         {texts.map((text, index) => (
                             <Indicator key={index} text={text} textStyle={textStyle} divStyle={divStyle} />
                         ))}
                     </div>
                 </div>
             </div>
-            <div className="bottom flex gap-8 items-center my-4 justify-between w-full h-fit">
+            <div className="bottom flex gap-8 items-center justify-between w-full">
                 {sparklineTitles.map((title, index) => (
                     <SparklineChart title={title} key={index}/>
                 ))}

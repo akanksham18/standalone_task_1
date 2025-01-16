@@ -71,15 +71,15 @@ const SparklineChart1: React.FC<{title:string}> = ({title}) => {
     }, []);
 
     return (
-        <div className='w-full h-full top-[508px] left-[26px] rounded-[15px] bg-[#F3F3F3]'>
-            <div className="h-[180px] top-[508px] left-[26px] gap-0">
+        <div className='w-full min-h-14 h-48 rounded-2xl bg-[#F3F3F3]'>
+            <div className="min-h-10 h-[70%]">
                 {/* Text inside the Sparkline chart rectangle */}
                 <div className="px-4 py-2 leading-[22.5px]">
                     {title}
                 </div>
 
                 {/* Chart container */}
-                <div className="w-full h-[141.9px] top-[541px] left-[52px]">
+                <div className="w-full h-full">
                     {/* Line Chart */}
                     <div
                         ref={chartRef}
